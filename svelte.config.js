@@ -1,13 +1,21 @@
 import adapter from '@sveltejs/adapter-static';
-
-const dev = process.argv.includes('dev');
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+	preprocess: [vitePreprocess()],
 	kit: {
-		adapter: adapter(),
+		adapter: adapter(
+			{
+				pages: 'build',
+				assets: 'build',
+				fallback: '404.html',
+				strict: true
+			}
+		),
 		paths: {
-			base: dev ? '' : process.env.BASE_PATH,
+			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
 		}
 	},
 };
+export default config;
