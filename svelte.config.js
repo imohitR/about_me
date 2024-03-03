@@ -8,13 +8,13 @@ const config = {
 			{
 				pages: 'build',
 				assets: 'build',
-				fallback: undefined,
+				fallback: '/imohitr.github.io',
 				precompress: false,
 				strict: false,
 			}
 		),
 		paths: {
-			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+			base: process.argv.includes('dev') ? '/imohitr.github.io' : process.env.BASE_PATH
 		}
 	},
 };
