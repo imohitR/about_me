@@ -1,6 +1,9 @@
 import adapter from '@sveltejs/adapter-static';
 
 /** @type {import('@sveltejs/kit').Config} */
+
+const dev = process.env.NODE_ENV === 'development';
+
 const config = {
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
@@ -14,7 +17,7 @@ const config = {
 			}
 		),
 		paths: {
-			base: process.argv.includes('dev') ? '/imohitr.github.io' : process.env.BASE_PATH
+			base: dev ? '' : '/imohitr.github.io'
 		}
 	},
 };
