@@ -2,7 +2,7 @@ import adapter from '@sveltejs/adapter-static';
 
 /** @type {import('@sveltejs/kit').Config} */
 
-const dev = process.env.NODE_ENV === 'development';
+
 
 const config = {
 	kit: {
@@ -16,7 +16,7 @@ const config = {
 			}
 		),
 		paths: {
-			base: dev ? '' : '/imohitr.github.io'
+			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
 		}
 	},
 };
