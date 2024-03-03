@@ -8,7 +8,7 @@ const config = {
 			{
 				pages: 'build',
 				assets: 'build',
-				fallback: 'src/app.html',
+				fallback: '404.html',
 				precompress: false,
 				strict: false,
 			}
