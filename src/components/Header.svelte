@@ -1,18 +1,19 @@
 <script>
+    import { base } from '$app/paths';
     // Receive y Props
     export let y;
     let tabs = [
         {
             name: "Home",
-            link: "#",
+            link: "{base}#",
         },
         {
             name: "Projects",
-            link: "#projects",
+            link: "{base}#projects",
         },
         {
             name: "About",
-            link: "#about",
+            link: "{base}#about",
         },
     ]
 </script>
