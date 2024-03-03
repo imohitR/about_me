@@ -8,7 +8,7 @@ const config = {
 			{
 				pages: 'build',
 				assets: 'build',
-				fallback: '/imohitr.github.io',
+				fallback: 'src/app.html',
 				precompress: false,
 				strict: false,
 			}
